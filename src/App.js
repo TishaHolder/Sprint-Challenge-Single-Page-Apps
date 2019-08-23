@@ -6,10 +6,12 @@ import WelcomePage from "./components/WelcomePage.js";
 import CharacterList from "./components/CharacterList.js";
 import LocationsList from "./components/LocationsList.js"; 
 import EpisodeList from "./components/EpisodeList.js";
+import SearchForm from "./components/SearchForm.js";
 
 export default function App() {
   return (
     <main>
+      <SearchForm />
       <Header />
       <TabNav /> 
 
