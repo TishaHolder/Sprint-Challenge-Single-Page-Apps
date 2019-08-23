@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import SearchResults from "./SearchResults.js";
 
 export default function SearchForm({ onSearch }) {
   // STRETCH TODO: Add stateful logic for query/form data
@@ -20,9 +21,7 @@ export default function SearchForm({ onSearch }) {
   console.log(parameter);  
 
 
-  useEffect(() => {
-    // TODO: Add AJAX/API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+  useEffect(() => {    
     
     if (parameter !== "") {
 
@@ -37,6 +36,18 @@ export default function SearchForm({ onSearch }) {
          setSearchResults(response.data.results);   
          
          console.log("search results", searchResults);
+
+         return (
+          <section className="list grid-view">
+
+         {searchResults.map(result => (
+                
+         <SearchResults key = {result.id} name = {result.name}  type = {result.type} dimension = {result.dimension} 
+           />))}
+
+         </section>
+      );
+         
 
      })
     }//end if    

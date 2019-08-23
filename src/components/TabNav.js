@@ -21,12 +21,14 @@ export default function TabNav() {
     const characterLabel = createLabel("users", "Characters")
     const locationsLabel = createLabel("map", "Locations")
     const episodesLabel = createLabel("video", "Episodes")
+    const searchLabel = createLabel("search", "Search")
 
     const panes = [
     { menuItem: <Menu.Item key='home' as={NavLink} to={`/`} content={welcomeLabel} /> },
     { menuItem: <Menu.Item key='characters' as={NavLink} to={`/characters`} content={characterLabel} /> },
     { menuItem: <Menu.Item key='locations' as={NavLink} to={`/locations`} content={locationsLabel} /> },
     { menuItem: <Menu.Item key='episodes' as={NavLink} to={`/episodes`} content={episodesLabel} /> },
+    { menuItem: <Menu.Item key='episodes' as={NavLink} to={`/search`} content={searchLabel} /> }
     ]
 
 
