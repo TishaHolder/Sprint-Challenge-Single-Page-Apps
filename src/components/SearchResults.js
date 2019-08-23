@@ -5,7 +5,10 @@ import 'semantic-ui-css/semantic.min.css';
 
 export default function SearchResults({ name, type, dimension }) {
 
-  return (
+console.log ("search results card");
+
+  return (    
+
     <Card>
       <Card.Content>
         <Card.Header>{name}</Card.Header>

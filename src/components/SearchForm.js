@@ -35,18 +35,19 @@ export default function SearchForm({ onSearch }) {
          //setter function stores response in characterList
          setSearchResults(response.data.results);   
          
-         console.log("search results", searchResults);
+         console.log("search results", searchResults);       
 
-         return (
-          <section className="list grid-view">
+                  
+          
+         /*<section className="list grid-view">
 
          {searchResults.map(result => (
                 
          <SearchResults key = {result.id} name = {result.name}  type = {result.type} dimension = {result.dimension} 
            />))}
 
-         </section>
-      );
+         </section>*/
+      
          
 
      })
@@ -65,6 +66,16 @@ export default function SearchForm({ onSearch }) {
         />
         <button type="submit">Search</button>
       </form>
+
+
+      
+
+         {searchResults.map(result => (
+                
+         <SearchResults key = {result.id} name = {result.name}  type = {result.type} dimension = {result.dimension} 
+           />))}
+
+        
     </section>
   );
 }
